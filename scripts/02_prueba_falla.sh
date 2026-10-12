@@ -61,19 +61,19 @@ hdfs_nn hdfs dfsadmin -report > $OUT/2_durante_report.txt
 echo "ms,hora,subreplicados,bloques_total" > $OUT/fsck_evolucion.csv
 TU=""; TR=""; MAXU=0; GUARDADO=0
 while true; do
-  hdfs_nn hdfs fsck $P -files -blocks -locations > /tmp/g05_fsck_iter.txt 2>/dev/null || true
+  hdfs_nn hdfs fsck $P -files -blocks -locations > /tmp/g01_fsck_iter.txt 2>/dev/null || true
   NOW=$(ms)
-  U=$(grep -m1 "Under-replicated blocks" /tmp/g05_fsck_iter.txt | grep -oE ":[[:space:]]*[0-9]+" | grep -oE "[0-9]+"); U=${U:-0}
-  echo "$NOW,$(ts),$U,$(grep -m1 'Total blocks' /tmp/g05_fsck_iter.txt | grep -oE '[0-9]+' | head -1)" >> $OUT/fsck_evolucion.csv
+  U=$(grep -m1 "Under-replicated blocks" /tmp/g01_fsck_iter.txt | grep -oE ":[[:space:]]*[0-9]+" | grep -oE "[0-9]+"); U=${U:-0}
+  echo "$NOW,$(ts),$U,$(grep -m1 'Total blocks' /tmp/g01_fsck_iter.txt | grep -oE '[0-9]+' | head -1)" >> $OUT/fsck_evolucion.csv
   if [ "$U" -gt 0 ]; then
     [ -z "$TU" ] && TU=$NOW
     [ "$U" -gt "$MAXU" ] && MAXU=$U
-    cp /tmp/g05_fsck_iter.txt $OUT/2_durante_fsck_subreplicado.txt; GUARDADO=1
+    cp /tmp/g01_fsck_iter.txt $OUT/2_durante_fsck_subreplicado.txt; GUARDADO=1
   fi
   if [ "$U" -eq 0 ] && { [ -n "$TU" ] || [ $(( NOW-TD )) -gt 40000 ]; }; then TR=$NOW; break; fi
 done
 sleep 2; kill $MONPID 2>/dev/null; wait $MONPID 2>/dev/null
-cp /tmp/g05_fsck_iter.txt $OUT/2_durante_fsck.txt
+cp /tmp/g01_fsck_iter.txt $OUT/2_durante_fsck.txt
 wait $READPID
 hdfs_nn cat /tmp/get_out.txt > $OUT/lectura_durante_logcliente.txt
 log "Lectura iniciada justo al detener el nodo:"; cat $OUT/lectura_durante.txt | tee -a $LOG
