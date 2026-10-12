@@ -106,3 +106,16 @@ La detección (~53 s) es constante porque depende de heartbeats; el tiempo de re
 - Si se tumba un nodo que quedó **vacío** tras una restauración, no ocurre re-replicación; por eso `02_prueba_falla.sh` acepta `auto` y elige el DataNode con más bloques.
 - La lectura se verifica con `hdfs dfs -get` + tamaño + md5 (las trazas del cliente Hadoop se mezclan con stdout y alteran el md5 si se usa `-cat | md5sum`).
 - Los bloques en re-replicación pueden pasar de "subreplicados" a "pendientes" casi al instante; por eso se monitorean ambas métricas (JMX del NameNode) además de `fsck`.
+
+## Evidencias (carpeta `evidencias/`)
+Prueba con el dataset de 10 GB, grupo 01 (ver `scripts/04_demo_capturas.sh`):
+
+| Captura | Qué muestra |
+|---|---|
+| `01_antes.png` | 3 contenedores `g01-*`, `HEALTHY`, 80 bloques, replicación 2 y reparto por DataNode |
+| `02_falla.png` | DataNode detenido, nodo muerto, bloques subreplicados, 2 nodos vivos y 1 muerto |
+| `03_recuperacion.png` | Evolución de bloques subreplicados hasta 0 (con horas) |
+| `04_final.png` | `HEALTHY`, nuevo reparto de bloques y md5 idéntico al original |
+| `05_ui_datanodes_muerto.png` | UI web del NameNode con el DataNode caído |
+
+Salidas de texto completas: `evidencias/demo_10GB/` (resumen por fase) y `resultados/` (pruebas automáticas de 1 GB y 10 GB).

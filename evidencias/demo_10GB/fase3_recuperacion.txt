@@ -1,0 +1,30 @@
+==================================================
+  GRUPO01 | 2026-10-11 23:05:14 | FASE 3: RE-REPLICACION (10GB)
+==================================================
+[23:05:16] GRUPO01 10GB | bloques subreplicados = 76 de 80
+[23:05:21] GRUPO01 10GB | bloques subreplicados = 72 de 80
+[23:05:26] GRUPO01 10GB | bloques subreplicados = 70 de 80
+[23:05:31] GRUPO01 10GB | bloques subreplicados = 66 de 80
+[23:05:36] GRUPO01 10GB | bloques subreplicados = 62 de 80
+[23:05:41] GRUPO01 10GB | bloques subreplicados = 60 de 80
+[23:05:46] GRUPO01 10GB | bloques subreplicados = 56 de 80
+[23:05:52] GRUPO01 10GB | bloques subreplicados = 52 de 80
+[23:05:57] GRUPO01 10GB | bloques subreplicados = 48 de 80
+[23:06:02] GRUPO01 10GB | bloques subreplicados = 46 de 80
+[23:06:07] GRUPO01 10GB | bloques subreplicados = 42 de 80
+[23:06:12] GRUPO01 10GB | bloques subreplicados = 38 de 80
+[23:06:17] GRUPO01 10GB | bloques subreplicados = 38 de 80
+[23:06:22] GRUPO01 10GB | bloques subreplicados = 36 de 80
+[23:06:28] GRUPO01 10GB | bloques subreplicados = 32 de 80
+[23:06:33] GRUPO01 10GB | bloques subreplicados = 28 de 80
+[23:06:38] GRUPO01 10GB | bloques subreplicados = 26 de 80
+[23:06:43] GRUPO01 10GB | bloques subreplicados = 22 de 80
+[23:06:48] GRUPO01 10GB | bloques subreplicados = 18 de 80
+[23:06:53] GRUPO01 10GB | bloques subreplicados = 16 de 80
+[23:06:58] GRUPO01 10GB | bloques subreplicados = 14 de 80
+[23:07:03] GRUPO01 10GB | bloques subreplicados = 10 de 80
+[23:07:08] GRUPO01 10GB | bloques subreplicados = 8 de 80
+[23:07:13] GRUPO01 10GB | bloques subreplicados = 6 de 80
+[23:07:18] GRUPO01 10GB | bloques subreplicados = 2 de 80
+[23:07:23] GRUPO01 10GB | bloques subreplicados = 0 de 80
+Recuperado: 188 s desde que se detuvo el nodo

@@ -1,0 +1,22 @@
+==================================================
+  GRUPO01 | 2026-10-11 23:05:08 | FASE 2: FALLA (10GB)
+==================================================
+$ docker stop g01-datanode1      (hora: 23:04:15)  ->  g01-datanode1 = FALLA
+NameNode declara el nodo DEAD a los 53 s
+
+	Under replicated blocks: 84
+	Missing blocks: 0
+Live datanodes (2):
+Name: 172.21.0.3:9866 (g01-datanode3.bigdata-grupo01_default)
+Num of Blocks: 88
+Name: 172.21.0.5:9866 (g01-datanode2.bigdata-grupo01_default)
+Num of Blocks: 0
+Dead datanodes (1):
+Name: 172.21.0.4:9866 (172.21.0.4)
+Num of Blocks: 0
+
+Status: HEALTHY
+ Total blocks (validated):	80 (avg. block size 134217728 B)
+ Under-replicated blocks:	78 (97.5 %)
+ Average block replication:	1.025
+ Missing replicas:		78 (48.75 %)

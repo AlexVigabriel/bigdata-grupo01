@@ -1,0 +1,23 @@
+==================================================
+  GRUPO01 | 2026-10-11 23:04:12 | FASE 1: ANTES DE LA FALLA (10GB)
+==================================================
+NAMES           STATUS
+g01-datanode3   Up About an hour
+g01-datanode2   Up 45 seconds
+g01-datanode1   Up 2 hours
+g01-namenode    Up 2 hours
+
+Status: HEALTHY
+ Total blocks (validated):	80 (avg. block size 134217728 B)
+ Under-replicated blocks:	0 (0.0 %)
+ Average block replication:	2.0
+ Missing replicas:		0 (0.0 %)
+
+Bloques por DataNode (IP):
+     80 172.21.0.3
+     80 172.21.0.4
+
+IP -> contenedor:
+  172.21.0.4 -> g01-datanode1
+  172.21.0.5 -> g01-datanode2
+  172.21.0.3 -> g01-datanode3

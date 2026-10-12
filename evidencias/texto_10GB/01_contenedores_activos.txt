@@ -1,0 +1,10 @@
+
+==================================================
+  GRUPO01 | 2026-10-11 22:15:17 | contenedores_activos
+==================================================
+$ docker ps --filter name=g01 --format table {{.Names}}\t{{.Status}}
+NAMES           STATUS
+g01-datanode3   Up 34 minutes
+g01-datanode2   Up 39 minutes
+g01-datanode1   Up 41 minutes
+g01-namenode    Up 41 minutes
