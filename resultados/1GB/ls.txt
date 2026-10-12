@@ -1,0 +1,2 @@
+Found 1 items
+-rw-r--r--   2 hadoop supergroup        1 G 2026-10-12 01:34 /grupo01/dataset_1GB/dataset_grupo01_1GB

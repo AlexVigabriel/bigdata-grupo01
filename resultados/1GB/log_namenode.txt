@@ -1,0 +1,2 @@
+2026-10-12 01:35:08 INFO  StateChange:880 - BLOCK* removeDeadDatanode: lost heartbeat from 172.21.0.5:9866, removeBlocksFromBlockMap true
+2026-10-12 01:35:08 INFO  NetworkTopology:229 - Removing a node: /default-rack/172.21.0.5:9866

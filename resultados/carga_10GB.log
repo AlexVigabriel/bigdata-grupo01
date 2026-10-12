@@ -1,0 +1,4 @@
+47525c8135b8981057d19ab91d61f3b2  /tmp/dataset_grupo01_10GB
+Tiempo de carga 10GB: 24 s
+Found 1 items
+-rw-r--r--   2 hadoop supergroup        10 G 2026-10-12 01:38 /grupo01/dataset_10GB/dataset_grupo01_10GB

@@ -1,0 +1,3 @@
+exit=0 tiempo=42s
+bytes=1073741824
+f9ba1ddf88df747dcfb44ee864c6dd10  /tmp/lectura_dataset_grupo01_1GB

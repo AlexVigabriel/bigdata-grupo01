@@ -1,0 +1,82 @@
+Configured Capacity: 3243303530496 (2.95 TB)
+Present Capacity: 2975924790431 (2.71 TB)
+DFS Remaining: 2952117792768 (2.68 TB)
+DFS Used: 23806997663 (22.17 GB)
+DFS Used%: 0.80%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (3):
+
+Name: 172.21.0.3:9866 (g01-datanode3.bigdata-grupo01_default)
+Hostname: datanode3
+Decommission Status : Normal
+Configured Capacity: 1081101176832 (1006.85 GB)
+DFS Used: 9198133724 (8.57 GB)
+Non DFS Used: 32871423524 (30.61 GB)
+DFS Remaining: 984039264256 (916.46 GB)
+DFS Used%: 0.85%
+DFS Remaining%: 91.02%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Mon Oct 12 01:38:12 UTC 2026
+Last Block Report: Mon Oct 12 01:33:54 UTC 2026
+Num of Blocks: 68
+
+
+Name: 172.21.0.4:9866 (g01-datanode1.bigdata-grupo01_default)
+Hostname: datanode1
+Decommission Status : Normal
+Configured Capacity: 1081101176832 (1006.85 GB)
+DFS Used: 7304405370 (6.80 GB)
+Non DFS Used: 34765151878 (32.38 GB)
+DFS Remaining: 984039264256 (916.46 GB)
+DFS Used%: 0.68%
+DFS Remaining%: 91.02%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Mon Oct 12 01:38:12 UTC 2026
+Last Block Report: Mon Oct 12 01:33:54 UTC 2026
+Num of Blocks: 54
+
+
+Name: 172.21.0.5:9866 (g01-datanode2.bigdata-grupo01_default)
+Hostname: datanode2
+Decommission Status : Normal
+Configured Capacity: 1081101176832 (1006.85 GB)
+DFS Used: 7304458569 (6.80 GB)
+Non DFS Used: 34765098679 (32.38 GB)
+DFS Remaining: 984039264256 (916.46 GB)
+DFS Used%: 0.68%
+DFS Remaining%: 91.02%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Mon Oct 12 01:38:10 UTC 2026
+Last Block Report: Mon Oct 12 01:36:07 UTC 2026
+Num of Blocks: 54
+
+

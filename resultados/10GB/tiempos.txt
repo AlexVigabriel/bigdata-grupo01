@@ -1,0 +1,1 @@
+deteccion_s=52 subrepl_visto_s=56 recuperado_s=125 recuperacion_desde_deteccion_s=72 max_subreplicados_fsck=60 max_pendientes_jmx=6

@@ -1,0 +1,47 @@
+[21:34:11] === ANTES DE LA FALLA (grupo01, 1GB) ===
+[21:34:15] DN1/DN2/DN3 -> Activos: 3 vivos
+[21:34:15] Bloques por DataNode (IP) ANTES:
+      4 172.21.0.3
+      5 172.21.0.4
+      7 172.21.0.5
+Status: HEALTHY
+ Total blocks (validated):	8 (avg. block size 134217728 B)
+ Under-replicated blocks:	0 (0.0 %)
+ Average block replication:	2.0
+[21:34:16] Victima elegida automaticamente: datanode2 (172.21.0.5, el nodo con mas bloques)
+[21:34:19] === DETENIENDO datanode2 (g01-datanode2) ===
+[21:34:20] datanode2 -> FALLA
+[21:35:12] Nodo declarado DEAD: +53 s tras detenerlo
+[21:35:55] Lectura iniciada justo al detener el nodo:
+exit=0 tiempo=42s
+bytes=1073741824
+f9ba1ddf88df747dcfb44ee864c6dd10  /tmp/lectura_dataset_grupo01_1GB
+[21:35:55] fsck no alcanzo a ver subreplicados (JMX pendientes max=4); revisar logs de DataNodes
+[21:35:55] === DURANTE (nodo ya muerto) ===
+Live datanodes (2):
+Dead datanodes (1):
+[21:35:55] === DESPUES DE LA RECUPERACION ===
+[21:35:59] Bloques por DataNode (IP) DESPUES:
+      8 172.21.0.3
+      8 172.21.0.4
+Status: HEALTHY
+ Under-replicated blocks:	0 (0.0 %)
+ Average block replication:	2.0
+ Missing replicas:		0 (0.0 %)
+[21:36:03] md5 original: f9ba1ddf88df747dcfb44ee864c6dd10  /tmp/dataset_grupo01_1GB
+[21:36:03] md5 despues : f9ba1ddf88df747dcfb44ee864c6dd10  -
+[21:36:04] Transferencias entre DataNodes (nuevas replicas):
+2026-10-12 01:35:09 INFO  DataNode:2903 - DataTransfer, at datanode1:9866: Transmitted BP-951737773-172.21.0.2-1791768830951:blk_1073741831_1007 (numBytes=134217728) to /172.21.0.3:9866
+2026-10-12 01:35:12 INFO  DataNode:2903 - DataTransfer, at datanode1:9866: Transmitted BP-951737773-172.21.0.2-1791768830951:blk_1073741827_1003 (numBytes=134217728) to /172.21.0.3:9866
+2026-10-12 01:35:12 INFO  DataNode:2903 - DataTransfer, at datanode1:9866: Transmitted BP-951737773-172.21.0.2-1791768830951:blk_1073741826_1002 (numBytes=134217728) to /172.21.0.3:9866
+2026-10-12 01:35:15 INFO  DataNode:2903 - DataTransfer, at datanode1:9866: Transmitted BP-951737773-172.21.0.2-1791768830951:blk_1073741825_1001 (numBytes=134217728) to /172.21.0.3:9866
+2026-10-12 01:35:09 INFO  DataNode:2903 - DataTransfer, at datanode3:9866: Transmitted BP-951737773-172.21.0.2-1791768830951:blk_1073741830_1006 (numBytes=134217728) to /172.21.0.4:9866
+2026-10-12 01:35:09 INFO  DataNode:2903 - DataTransfer, at datanode3:9866: Transmitted BP-951737773-172.21.0.2-1791768830951:blk_1073741829_1005 (numBytes=134217728) to /172.21.0.4:9866
+2026-10-12 01:35:12 INFO  DataNode:2903 - DataTransfer, at datanode3:9866: Transmitted BP-951737773-172.21.0.2-1791768830951:blk_1073741828_1004 (numBytes=134217728) to /172.21.0.4:9866
+[21:36:04] === RESTAURANDO datanode2 ===
+Status: HEALTHY
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+[21:36:49] Bloques por DataNode (IP) tras restaurar:
+      8 172.21.0.3
+      8 172.21.0.4
