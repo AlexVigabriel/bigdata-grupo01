@@ -12,6 +12,7 @@ config.env                Configuración HDFS (replicación=2, bloque=128 MB, ..
 scripts/common.sh         Funciones auxiliares (GRUPO=grupo01)
 scripts/01_generar_cargar.sh   Genera el dataset aleatorio y lo carga a HDFS (con tiempos)
 scripts/02_prueba_falla.sh     Prueba de fallo completa (antes / durante / después / restauración)
+scripts/03_evidencias_guiado.sh  Demo guiada con pausas para tomar capturas (guarda la salida en evidencias/texto_*)
 resultados/               Salidas de cada experimento (ver abajo)
 evidencias/               Capturas de pantalla (UI web del NameNode)
 docs/arquitectura.md      Diagrama
