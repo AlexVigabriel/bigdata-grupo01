@@ -1,0 +1,31 @@
+services:
+  namenode:
+    image: apache/hadoop:3.3.6
+    container_name: g01-namenode
+    hostname: namenode
+    command: ["hdfs", "namenode"]
+    ports: ["9870:9870"]
+    env_file: ./config.env
+    environment:
+      ENSURE_NAMENODE_DIR: /tmp/hadoop-root/dfs/name
+  datanode1:
+    image: apache/hadoop:3.3.6
+    container_name: g01-datanode1
+    hostname: datanode1
+    command: ["hdfs", "datanode"]
+    env_file: ./config.env
+    depends_on: [namenode]
+  datanode2:
+    image: apache/hadoop:3.3.6
+    container_name: g01-datanode2
+    hostname: datanode2
+    command: ["hdfs", "datanode"]
+    env_file: ./config.env
+    depends_on: [namenode]
+  datanode3:
+    image: apache/hadoop:3.3.6
+    container_name: g01-datanode3
+    hostname: datanode3
+    command: ["hdfs", "datanode"]
+    env_file: ./config.env
+    depends_on: [namenode]
